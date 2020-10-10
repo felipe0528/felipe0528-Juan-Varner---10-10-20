@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BertoniAlbums.Interfaces
 {
-    public interface IAlbumsInterface
+    public interface IAlbumsRepository
     {
         Task<List<Album>> GetAllAlbums();
         Task<List<Photo>> GetPhotosByAlbumId(int albumId);

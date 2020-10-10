@@ -9,10 +9,10 @@ namespace BertoniAlbums.Services
 {
     public class PhotosService : IPhotosService
     {
-        private IAlbumsInterface _albumsInterface;
+        private IAlbumsRepository _albumsInterface;
         private ICommentsService _commentsService;
 
-        public PhotosService(IAlbumsInterface albumsInterface,
+        public PhotosService(IAlbumsRepository albumsInterface,
             ICommentsService commentsService)
         {
             _commentsService = commentsService;

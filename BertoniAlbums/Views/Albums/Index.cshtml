@@ -1,0 +1,23 @@
+﻿@model IEnumerable<BertoniAlbums.DTOs.AlbumDTO>
+@{
+    ViewData["Title"] = "Home Page Albums";
+}
+
+    <div class="container">
+        <div class="container">
+            <div class="row">
+                @foreach (var item in Model)
+                {
+                    <div class="col-md-4 py-2">
+                        <div class="card h-100 border-info">
+                            <div class="card-body">
+                                <h5 class="card-title">@Html.DisplayFor(modelItem => item.Id)</h5>
+                                <p class="card-text"> @Html.DisplayFor(modelItem => item.Title)</p>
+                                <a href="@Url.Action("Photos", "Albums", new {  id=item.Id })" class="btn btn-info">Go to Album</a>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>

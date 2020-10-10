@@ -27,7 +27,7 @@ namespace BertoniAlbums
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            services.AddSingleton<IAlbumsInterface, AlbumsRepository>();
+            services.AddSingleton<IAlbumsRepository, AlbumsRepository>();
             services.AddSingleton<IAlbumService, AlbumsService>();
             services.AddSingleton<IPhotosService, PhotosService>();
             services.AddSingleton<ICommentsService, CommentsService>();
@@ -57,7 +57,7 @@ namespace BertoniAlbums
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Gallery}/{action=Index}/{id?}");
+                    pattern: "{controller=Albums}/{action=Index}/{id?}");
             });
         }
     }

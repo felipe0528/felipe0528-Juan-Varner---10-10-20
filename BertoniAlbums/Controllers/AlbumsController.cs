@@ -10,16 +10,14 @@ using BertoniAlbums.Interfaces;
 
 namespace BertoniAlbums.Controllers
 {
-    public class GalleryController : Controller
+    public class AlbumsController : Controller
     {
-        private readonly ILogger<GalleryController> _logger;
         private readonly IAlbumService _albumsService;
         private readonly IPhotosService _photosService;
 
-        public GalleryController(ILogger<GalleryController> logger,
+        public AlbumsController(
             IAlbumService albumsService, IPhotosService photosService)
         {
-            _logger = logger;
             _albumsService = albumsService;
             _photosService = photosService;
         }

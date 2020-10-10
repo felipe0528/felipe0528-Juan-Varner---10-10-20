@@ -9,9 +9,9 @@ namespace BertoniAlbums.Services
 {
     public class AlbumsService : IAlbumService
     {
-        private IAlbumsInterface _albumsInterface;
+        private IAlbumsRepository _albumsInterface;
 
-        public AlbumsService(IAlbumsInterface albumsInterface)
+        public AlbumsService(IAlbumsRepository albumsInterface)
         {
             _albumsInterface = albumsInterface;
         }

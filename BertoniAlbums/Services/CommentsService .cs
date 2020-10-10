@@ -9,9 +9,9 @@ namespace BertoniAlbums.Services
 {
     public class CommentsService : ICommentsService
     {
-        private IAlbumsInterface _albumsInterface;
+        private IAlbumsRepository _albumsInterface;
 
-        public CommentsService(IAlbumsInterface albumsInterface)
+        public CommentsService(IAlbumsRepository albumsInterface)
         {
             _albumsInterface = albumsInterface;
         }

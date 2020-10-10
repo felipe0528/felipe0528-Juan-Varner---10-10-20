@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BertoniAlbums.Repositories
 {
-    public class AlbumsRepository : IAlbumsInterface
+    public class AlbumsRepository : IAlbumsRepository
     {
         private readonly HttpClient httpClient;
 
